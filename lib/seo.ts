@@ -58,10 +58,6 @@ export function localBusinessSchema() {
     image: `${siteConfig.url}/office.jpg`,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    address: {
-      "@type": "PostalAddress",
-      ...siteConfig.address,
-    },
     url: siteConfig.url,
     openingHoursSpecification: [
       {

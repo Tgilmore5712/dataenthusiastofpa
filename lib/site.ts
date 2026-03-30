@@ -4,13 +4,6 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.yourdomain.com",
   phone: "717-802-9344",
   email: "Todd@dataenthusiastofpa.com",
-  address: {
-    streetAddress: "100 Market Street",
-    addressLocality: "Philadelphia",
-    addressRegion: "PA",
-    postalCode: "19106",
-    addressCountry: "US",
-  },
   social: {
     linkedin: "https://www.linkedin.com/company/yourcompany",
   },

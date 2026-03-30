@@ -46,7 +46,12 @@ export default function ContactPage() {
             <li>2. Align scope, timeline, and success metrics</li>
             <li>3. Receive a tailored execution roadmap</li>
           </ul>
-          <p className="mt-6 text-sm text-slate-200">Prefer email? Todd@dataenthusiastofpa.com</p>
+          <p className="mt-6 text-sm text-slate-200">
+            Prefer email?{" "}
+            <a href="mailto:Todd@dataenthusiastofpa.com" className="underline underline-offset-2 hover:text-white">
+              Todd@dataenthusiastofpa.com
+            </a>
+          </p>
         </aside>
       </div>
     </main>

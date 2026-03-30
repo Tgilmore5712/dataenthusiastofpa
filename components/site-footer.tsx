@@ -15,9 +15,10 @@ export function SiteFooter() {
           <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900">Contact</h3>
           <ul className="mt-3 space-y-2 text-sm text-slate-600">
             <li>{siteConfig.phone}</li>
-            <li>{siteConfig.email}</li>
             <li>
-              {siteConfig.address.streetAddress}, {siteConfig.address.addressLocality}, {siteConfig.address.addressRegion} {siteConfig.address.postalCode}
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-slate-900 underline-offset-2 hover:underline">
+                {siteConfig.email}
+              </a>
             </li>
           </ul>
         </div>
