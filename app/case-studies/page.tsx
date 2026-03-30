@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Case Studies | Data of PA Business Solutions",
+  title: "Case Studies | Data Enthusiast of PA Business Solutions",
   description:
     "Review real-world outcomes from modernization, automation, and platform transformation engagements.",
   path: "/case-studies",

@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Data of PA Business Solutions",
-  legalName: "Data of PA Business Solutions LLC",
+  name: "Data Enthusiast of PA Business Solutions",
+  legalName: "Data Enthusiast of PA Business Solutions LLC",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.yourdomain.com",
   phone: "+1-800-555-0199",
   email: "hello@yourdomain.com",
@@ -16,7 +16,7 @@ export const siteConfig = {
   },
   defaultTitle: "Business Solutions for Growth, Efficiency, and Scale",
   defaultDescription:
-    "Data of PA helps companies improve operations, modernize technology, and drive measurable business outcomes with strategy, engineering, and managed solutions.",
+    "Data Enthusiast of PA helps companies improve operations, modernize technology, and drive measurable business outcomes with strategy, engineering, and managed solutions.",
   keywords: [
     "business solutions",
     "technology consulting",

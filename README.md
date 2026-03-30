@@ -1,4 +1,4 @@
-# Data of PA Business Solutions Website
+# Data Enthusiast of PA Business Solutions Website
 
 Professional Next.js business website with strong foundational SEO:
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us | Data of PA Business Solutions",
+  title: "About Us | Data Enthusiast of PA Business Solutions",
   description:
     "Learn how our consulting, engineering, and managed teams help organizations improve performance and reduce risk.",
   path: "/about",

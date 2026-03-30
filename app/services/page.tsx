@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/json-ld";
 import { buildMetadata, serviceSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services | Data of PA Business Solutions",
+  title: "Services | Data Enthusiast of PA Business Solutions",
   description:
     "Explore strategy, implementation, automation, and managed services designed to improve productivity and business performance.",
   path: "/services",
