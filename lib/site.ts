@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "Data Enthusiast of PA Business Solutions",
   legalName: "Data Enthusiast of PA Business Solutions LLC",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.yourdomain.com",
-  phone: "+1-800-555-0199",
-  email: "hello@yourdomain.com",
+  phone: "717-802-9344",
+  email: "Todd@dataenthusiastofpa.com",
   address: {
     streetAddress: "100 Market Street",
     addressLocality: "Philadelphia",
