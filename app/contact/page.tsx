@@ -8,15 +8,37 @@ export const metadata: Metadata = buildMetadata({
   path: "/contact",
 });
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams?: Promise<{ status?: string }>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const resolvedSearchParams = await searchParams;
+  const status = resolvedSearchParams?.status;
+
   return (
     <main className="mx-auto w-full max-w-6xl px-6 py-16">
       <h1 className="text-4xl font-bold tracking-tight text-slate-900">Let us talk about your next growth initiative</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
         Share your priorities and we will propose an actionable plan with clear milestones.
       </p>
+      {status === "success" ? (
+        <p className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+          Thank you. Your inquiry was submitted successfully.
+        </p>
+      ) : null}
+      {status === "error" ? (
+        <p className="mt-4 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800">
+          Please complete all required fields and try again.
+        </p>
+      ) : null}
+      {status === "db-error" ? (
+        <p className="mt-4 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800">
+          We could not save your inquiry right now. Please email us directly and we will respond quickly.
+        </p>
+      ) : null}
       <div className="mt-10 grid gap-8 md:grid-cols-2">
-        <form className="rounded-2xl border border-slate-200 bg-white p-7" action="#" method="post">
+        <form className="rounded-2xl border border-slate-200 bg-white p-7" action="/api/contact" method="post">
           <div className="grid gap-4">
             <label className="text-sm font-medium text-slate-700">
               Full Name

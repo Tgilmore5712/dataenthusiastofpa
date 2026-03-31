@@ -37,6 +37,27 @@ NEXT_PUBLIC_SITE_URL=https://your-real-domain.com
 
 This value is used for canonical tags, sitemap URLs, robots host entry, and structured data URLs.
 
+## Contact Form Storage (Vercel Postgres)
+
+The contact form now saves submissions to PostgreSQL table `contact_inquiries`.
+
+Required environment variable:
+
+```bash
+POSTGRES_URL=postgres://...
+```
+
+On Vercel, create/connect your Postgres storage and Vercel will provide the variable automatically.
+
+Table schema reference:
+
+- `db/schema.sql`
+
+Notes:
+
+- The API route also runs `CREATE TABLE IF NOT EXISTS` on submit, so first submission can self-initialize the table.
+- If database connection fails, users are redirected to `/contact?status=db-error`.
+
 ## SEO Checklist
 
 1. Replace placeholder contact information in lib/site.ts.
