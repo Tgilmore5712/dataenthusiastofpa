@@ -7,18 +7,19 @@ export const siteConfig = {
   social: {
     linkedin: "https://www.linkedin.com/company/yourcompany",
   },
-  defaultTitle: "Business Solutions for Growth, Efficiency, and Scale",
+  defaultTitle: "Automation Workflows, Web and App Builds",
   defaultDescription:
-    "Data Enthusiast of PA helps companies improve operations, modernize technology, and drive measurable business outcomes with strategy, engineering, and managed solutions.",
+    "Data Enthusiast of PA builds workflow automation, custom web and mobile apps, Procore solutions, and QuickBooks Online integrations for growing companies.",
   keywords: [
-    "business solutions",
-    "technology consulting",
-    "digital transformation",
-    "managed services",
+    "workflow automation",
+    "web app development",
+    "mobile app development",
+    "Procore development",
+    "QuickBooks Online integration",
+    "QBO integrations",
+    "API integrations",
     "process automation",
-    "enterprise technology",
-    "business strategy",
-    "software solutions",
+    "custom software development",
   ],
 };
 

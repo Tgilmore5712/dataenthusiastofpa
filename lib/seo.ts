@@ -80,7 +80,7 @@ export function serviceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Business and Technology Solutions",
+    serviceType: "Workflow Automation and Software Development",
     provider: {
       "@type": "Organization",
       name: siteConfig.legalName,
@@ -88,6 +88,6 @@ export function serviceSchema() {
     },
     areaServed: "United States",
     description:
-      "Strategy, engineering, and managed services that improve business performance and operational resilience.",
+      "Automation workflows, custom web and mobile app development, Procore solutions, and QuickBooks Online integrations.",
   };
 }

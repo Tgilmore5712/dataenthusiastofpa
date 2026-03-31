@@ -9,9 +9,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Business Solutions for Revenue, Efficiency, and Scale",
+  title: "Automation Workflows, Web and App Development",
   description:
-    "Professional business solutions that combine strategy, technology implementation, and managed support to accelerate growth.",
+    "Workflow automation, custom web and mobile apps, Procore development, and QuickBooks Online integrations built for operational speed.",
   path: "/",
 });
 
@@ -24,13 +24,13 @@ export default function Home() {
 
       <section className="rounded-3xl bg-slate-900 px-8 py-14 text-white md:px-14">
         <p className="inline-flex rounded-full border border-slate-500 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200">
-          Professional Corporate Solutions
+          Automation and Product Engineering
         </p>
         <h1 className="mt-7 max-w-4xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-          Business solutions that turn complex operations into scalable growth engines.
+          We build automation workflows, web apps, and mobile apps that eliminate manual work.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-          We help leadership teams modernize systems, automate workflows, and build high-performance operating models with clear ROI.
+          From Procore development to QuickBooks Online integrations, we implement practical systems your team can use immediately.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
@@ -50,21 +50,21 @@ export default function Home() {
 
       <section className="mt-12 grid gap-6 md:grid-cols-3">
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Strategic Consulting</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Workflow Automation</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Business architecture, capability mapping, and transformation roadmaps for executive teams.
+            Automate repetitive back-office processes across operations, finance, and project teams.
           </p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Technology Delivery</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Web and App Builds</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Full-cycle engineering and integration programs that reduce technical debt and speed execution.
+            Design and delivery of custom web platforms, field apps, and internal business tools.
           </p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Managed Improvement</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Platform Integrations</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Ongoing optimization, reporting, and operational support to sustain long-term gains.
+            Procore development, QBO integrations, and API connections that keep systems in sync.
           </p>
         </article>
       </section>
@@ -73,20 +73,20 @@ export default function Home() {
         <h2 className="font-serif text-3xl tracking-tight text-slate-900 md:text-4xl">Why enterprise teams choose us</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           <div className="rounded-xl bg-slate-50 p-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Execution confidence</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Cross-functional teams that align strategy, delivery, and measurable outcomes.</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Builder mindset</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">We focus on shipping working automations and applications, not slide decks.</p>
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Operational rigor</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Governance, risk control, and transparent KPIs throughout every engagement.</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Integration depth</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">Strong experience with Procore APIs, QBO, and multi-system workflow orchestration.</p>
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Speed to value</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Phased implementation that delivers early business wins while scaling sustainably.</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Fast implementation</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">Rapid sprint execution with visible progress every week.</p>
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Future-ready architecture</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Modern foundations built for growth, resilience, and evolving customer demands.</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Maintainable systems</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">Clean architecture, documentation, and support so your team can scale confidently.</p>
           </div>
         </div>
       </section>

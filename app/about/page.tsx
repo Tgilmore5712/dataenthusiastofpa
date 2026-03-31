@@ -4,29 +4,29 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "About Us | Data Enthusiast of PA Business Solutions",
   description:
-    "Learn how our consulting, engineering, and managed teams help organizations improve performance and reduce risk.",
+    "13+ years of analytics and operations leadership with deep SQL, BI, workflow automation, and cross-functional delivery experience.",
   path: "/about",
 });
 
 export default function AboutPage() {
   return (
     <main className="mx-auto w-full max-w-6xl px-6 py-16">
-      <h1 className="text-4xl font-bold tracking-tight text-slate-900">Built for measurable outcomes</h1>
+      <h1 className="text-4xl font-bold tracking-tight text-slate-900">Execution-first technical partner</h1>
       <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
-        We partner with growth-focused companies to solve operational bottlenecks, modernize legacy systems, and create resilient digital workflows.
+        Led by Todd Gilmore, Data Enthusiast of PA brings 13+ years of analytics and operations leadership across multi-site organizations. We build practical automation systems, reporting platforms, and custom applications that improve day-to-day execution.
       </p>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         <article className="rounded-2xl border border-slate-200 bg-white p-6">
-          <h2 className="text-xl font-semibold text-slate-900">Advisory</h2>
-          <p className="mt-3 text-sm leading-6 text-slate-700">Business strategy, process mapping, and roadmap design aligned with ROI goals.</p>
+          <h2 className="text-xl font-semibold text-slate-900">Analytics Engineering</h2>
+          <p className="mt-3 text-sm leading-6 text-slate-700">Advanced SQL, KPI frameworks, and Power BI dashboards designed for real-time operational visibility.</p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6">
-          <h2 className="text-xl font-semibold text-slate-900">Delivery</h2>
-          <p className="mt-3 text-sm leading-6 text-slate-700">Cross-functional teams that execute platform builds, automation, and integrations.</p>
+          <h2 className="text-xl font-semibold text-slate-900">Automation Delivery</h2>
+          <p className="mt-3 text-sm leading-6 text-slate-700">AI-assisted workflow automation and integrations that reduce manual steps and cycle time.</p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6">
-          <h2 className="text-xl font-semibold text-slate-900">Optimization</h2>
-          <p className="mt-3 text-sm leading-6 text-slate-700">Continuous improvement with reporting, KPI dashboards, and operational support.</p>
+          <h2 className="text-xl font-semibold text-slate-900">Program Leadership</h2>
+          <p className="mt-3 text-sm leading-6 text-slate-700">Cross-functional execution across product, engineering, finance, and operations with measurable outcomes.</p>
         </article>
       </div>
     </main>

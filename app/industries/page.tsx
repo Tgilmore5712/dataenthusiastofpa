@@ -4,25 +4,25 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Industries | Data Enthusiast of PA Business Solutions",
   description:
-    "See how our business solutions adapt to healthcare, finance, logistics, and professional services organizations.",
+    "Automation and app development expertise for construction, logistics, fulfillment, operations, and service businesses.",
   path: "/industries",
 });
 
 const industries = [
-  "Healthcare and MedTech",
-  "Financial and Insurance Services",
+  "Construction and Field Operations",
   "Logistics and Supply Chain",
+  "3PL Fulfillment (D2C and B2B)",
+  "Finance and Accounting Workflows",
   "Professional Services",
-  "Manufacturing and Operations",
-  "Government and Public Sector",
+  "Multi-Site Operations",
 ];
 
 export default function IndustriesPage() {
   return (
     <main className="mx-auto w-full max-w-6xl px-6 py-16">
-      <h1 className="text-4xl font-bold tracking-tight text-slate-900">Industry expertise with practical execution</h1>
+      <h1 className="text-4xl font-bold tracking-tight text-slate-900">Industry context plus technical delivery</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-        We bring repeatable frameworks and compliance-aware delivery practices to complex operating environments.
+        We build systems for teams that manage complex operations, large data sets, and tight execution timelines.
       </p>
       <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {industries.map((industry) => (
