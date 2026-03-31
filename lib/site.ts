@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "Data Enthusiast of PA Business Solutions",
   legalName: "Data Enthusiast of PA Business Solutions LLC",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.yourdomain.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://dataenthusiastofpa.com",
   phone: "717-802-9344",
   email: "Todd@dataenthusiastofpa.com",
   social: {
-    linkedin: "https://www.linkedin.com/company/yourcompany",
+    linkedin: "https://www.linkedin.com/in/todd-gilmore-86208153",
   },
   defaultTitle: "Automation Workflows, Web and App Builds",
   defaultDescription:

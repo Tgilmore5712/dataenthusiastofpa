@@ -32,7 +32,7 @@ Set your production domain in environment variables:
 2. Add your real domain:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://your-real-domain.com
+NEXT_PUBLIC_SITE_URL=https://dataenthusiastofpa.com
 ```
 
 This value is used for canonical tags, sitemap URLs, robots host entry, and structured data URLs.
@@ -44,6 +44,7 @@ The contact form now saves submissions to PostgreSQL table `contact_inquiries`.
 Required environment variable:
 
 ```bash
+NEXT_PUBLIC_SITE_URL=https://dataenthusiastofpa.com
 POSTGRES_URL=postgres://...
 ```
 
@@ -60,14 +61,11 @@ Notes:
 
 ## SEO Checklist
 
-1. Replace placeholder contact information in lib/site.ts.
-2. Add a real brand logo at public/logo.png.
-3. Add a real office image at public/office.jpg (or update schema references).
-4. Update social profile links in lib/site.ts.
-5. Connect Search Console and submit /sitemap.xml.
-6. Verify indexing rules in /robots.txt.
-7. Run Lighthouse and target high scores in Performance, SEO, and Accessibility.
-8. Add analytics and conversion tracking after go-live.
+1. Confirm `NEXT_PUBLIC_SITE_URL` matches the production domain.
+2. Connect Search Console and submit `/sitemap.xml`.
+3. Verify indexing rules in `/robots.txt`.
+4. Run Lighthouse and target high scores in Performance, SEO, and Accessibility.
+5. Add analytics and conversion tracking after go-live.
 
 ## Content Editing
 

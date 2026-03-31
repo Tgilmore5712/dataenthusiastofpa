@@ -38,6 +38,8 @@ export function buildMetadata({
 }
 
 export function organizationSchema() {
+  const sameAs = [siteConfig.social.linkedin].filter(Boolean);
+
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -45,8 +47,7 @@ export function organizationSchema() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    logo: `${siteConfig.url}/logo.png`,
-    sameAs: [siteConfig.social.linkedin],
+    ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 }
 
@@ -55,7 +56,6 @@ export function localBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: siteConfig.name,
-    image: `${siteConfig.url}/office.jpg`,
     telephone: siteConfig.phone,
     email: siteConfig.email,
     url: siteConfig.url,
