@@ -32,7 +32,7 @@ Set your production domain in environment variables:
 2. Add your real domain:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://dataenthusiastofpa.com
+NEXT_PUBLIC_SITE_URL=https://www.dataenthusiastofpa.com
 ```
 
 This value is used for canonical tags, sitemap URLs, robots host entry, and structured data URLs.
@@ -44,7 +44,7 @@ The contact form now saves submissions to PostgreSQL table `contact_inquiries`.
 Required environment variable:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://dataenthusiastofpa.com
+NEXT_PUBLIC_SITE_URL=https://www.dataenthusiastofpa.com
 POSTGRES_URL=postgres://...
 ```
 
