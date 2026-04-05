@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     description: siteConfig.defaultDescription,
   },
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png", sizes: "768x768" }],
-    shortcut: "/icon.png",
+    icon: [{ url: "/favicon.ico", type: "image/x-icon", sizes: "16x16 32x32 48x48 64x64 128x128 256x256" }],
+    shortcut: "/favicon.ico",
     apple: "/icon.png",
   },
   manifest: "/site.webmanifest",
