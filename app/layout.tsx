@@ -40,6 +40,11 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} | ${siteConfig.defaultTitle}`,
     description: siteConfig.defaultDescription,
   },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "768x768" }],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   manifest: "/site.webmanifest",
   category: "business",
 };
