@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Data Enthusiast of PA cosmic favicon</title>
+  <desc id="desc">Glowing orb with network lines on a dark rounded-square background</desc>
+  <defs>
+    <linearGradient id="spaceBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080a16" />
+      <stop offset="50%" stop-color="#0f1438" />
+      <stop offset="100%" stop-color="#1d1146" />
+    </linearGradient>
+    <radialGradient id="orbFill" cx="38%" cy="34%" r="68%">
+      <stop offset="0%" stop-color="#d8f3ff" />
+      <stop offset="45%" stop-color="#7cc7ff" />
+      <stop offset="78%" stop-color="#7e74ff" />
+      <stop offset="100%" stop-color="#f055ff" />
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#spaceBg)" />
+
+  <circle cx="32" cy="32" r="18" fill="url(#orbFill)" filter="url(#glow)" opacity="0.95" />
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#73b5ff" stroke-opacity="0.35" />
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#b489ff" stroke-opacity="0.25" />
+
+  <path d="M19 39 L28 29 L38 35 L45 25" stroke="#d9f4ff" stroke-opacity="0.65" stroke-width="0.8" fill="none" />
+  <path d="M21 28 L31 24 L40 30 L44 40" stroke="#ffd6ff" stroke-opacity="0.55" stroke-width="0.7" fill="none" />
+
+  <circle cx="28" cy="29" r="1.4" fill="#ffffff" />
+  <circle cx="38" cy="35" r="1.3" fill="#f2e7ff" />
+  <circle cx="31" cy="24" r="1.1" fill="#cbe9ff" />
+  <circle cx="40" cy="30" r="1.2" fill="#ffffff" />
+
+  <path d="M17 43 L12 46" stroke="#ffb347" stroke-width="1.4" stroke-linecap="round" />
+  <polygon points="10,47 13,43 14,48" fill="#ffd077" />
+  <path d="M47 42 L52 47" stroke="#ea7cff" stroke-width="1.4" stroke-linecap="round" />
+  <polygon points="53,49 50,46 55,45" fill="#ff9dff" />
+  <path d="M31 9 L31 6" stroke="#7ec8ff" stroke-width="1.3" stroke-linecap="round" />
+  <polygon points="31,4 29,7 33,7" fill="#a9dcff" />
+</svg>
