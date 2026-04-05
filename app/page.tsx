@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Automation Workflows, Web and App Development",
   description:
-    "Workflow automation, custom web and mobile apps, Procore development, and QuickBooks Online integrations built for operational speed.",
+    "Workflow automation, custom web and mobile apps, Procore development, and QuickBooks Online integrations with team enablement built in.",
   path: "/",
 });
 
@@ -30,7 +30,7 @@ export default function Home() {
           We build automation workflows, web apps, and mobile apps that eliminate manual work.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-          From Procore development to QuickBooks Online integrations, we implement practical systems your team can use immediately.
+          From Procore development to QuickBooks Online integrations, we implement practical systems and upskill your team so the capability stays in-house.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
@@ -72,6 +72,10 @@ export default function Home() {
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 md:p-12">
         <h2 className="font-serif text-3xl tracking-tight text-slate-900 md:text-4xl">Why enterprise teams choose us</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="rounded-xl bg-slate-50 p-5 md:col-span-2">
+            <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Team enablement model</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">You already have strong employees. We close skill gaps in a fast-changing environment by building with your team, documenting every system, and training team members so you can reduce long-term outside dependency.</p>
+          </div>
           <div className="rounded-xl bg-slate-50 p-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Builder mindset</p>
             <p className="mt-2 text-sm leading-6 text-slate-700">We focus on shipping working automations and applications, not slide decks.</p>

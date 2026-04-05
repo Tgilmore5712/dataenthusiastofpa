@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact | Data Enthusiast of PA Business Solutions",
   description:
-    "Contact our team for a strategy consultation about digital transformation, process automation, or managed services.",
+    "Contact our team for workflow automation, app development, and team enablement that helps your staff own the solution long term.",
   path: "/contact",
 });
 
@@ -18,9 +18,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
   return (
     <main className="mx-auto w-full max-w-6xl px-6 py-16">
-      <h1 className="text-4xl font-bold tracking-tight text-slate-900">Let us talk about your next growth initiative</h1>
+      <h1 className="text-4xl font-bold tracking-tight text-slate-900">Let us build with your team, not around it</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-        Share your priorities and we will propose an actionable plan with clear milestones.
+        You have strong employees. We help close skill gaps in a fast-changing environment, implement quickly, and transfer knowledge so your team keeps the capability after launch.
       </p>
       {status === "success" ? (
         <p className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
@@ -65,8 +65,8 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           <h2 className="text-xl font-semibold">Engagement starts with a discovery call</h2>
           <ul className="mt-5 space-y-3 text-sm text-slate-200">
             <li>1. Define your highest-impact opportunities</li>
-            <li>2. Align scope, timeline, and success metrics</li>
-            <li>3. Receive a tailored execution roadmap</li>
+            <li>2. Align scope, timeline, and internal team ownership</li>
+            <li>3. Receive a tailored build and knowledge-transfer roadmap</li>
           </ul>
           <p className="mt-6 text-sm text-slate-200">
             Prefer email?{" "}

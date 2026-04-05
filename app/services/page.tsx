@@ -6,7 +6,7 @@ import { buildMetadata, serviceSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Services | Data Enthusiast of PA Business Solutions",
   description:
-    "Workflow automation, custom web and mobile development, Procore integrations, and QuickBooks Online integration services.",
+    "Workflow automation, custom web and mobile development, Procore integrations, QBO integration services, and team enablement.",
   path: "/services",
 });
 
@@ -31,6 +31,11 @@ const services = [
     description:
       "Connect QBO with your systems to automate billing, reconciliations, and financial reporting workflows.",
   },
+  {
+    name: "Team Enablement and Knowledge Transfer",
+    description:
+      "We pair with your existing team, train key contributors, and provide documentation and handoff guides so capability remains with your employees after implementation.",
+  },
 ];
 
 export default function ServicesPage() {
@@ -52,7 +57,7 @@ export default function ServicesPage() {
       <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-white">
         <h2 className="text-2xl font-semibold">Need a tailored build plan?</h2>
         <p className="mt-3 max-w-2xl text-slate-200">
-          We define scope, integration points, and milestones, then build and deploy with rapid weekly progress.
+          We define scope, integration points, and milestones, then build, enable your team, and deploy with rapid weekly progress.
         </p>
         <Link
           href="/contact"
