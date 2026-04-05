@@ -2,7 +2,7 @@
 
 Professional Next.js business website with strong foundational SEO:
 
-- App Router with dedicated pages: Home, About, Services, Industries, Case Studies, Contact
+- App Router with dedicated pages: Home, About, Services, Industries, Contact
 - Per-page metadata, canonical URLs, Open Graph, Twitter tags
 - Structured data via JSON-LD (Organization, LocalBusiness, Service)
 - SEO route handlers for robots.txt and sitemap.xml
@@ -71,7 +71,6 @@ Notes:
 
 - Homepage content: app/page.tsx
 - Service details: app/services/page.tsx
-- Case studies: app/case-studies/page.tsx
 - Global site identity and contact details: lib/site.ts
 - SEO helper logic and structured data: lib/seo.ts
 

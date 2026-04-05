@@ -40,10 +40,10 @@ export default function Home() {
             Talk to an Expert
           </Link>
           <Link
-            href="/case-studies"
+            href="/services"
             className="rounded-full border border-slate-400 px-6 py-3 text-sm font-semibold text-white transition hover:border-amber-300 hover:text-amber-200"
           >
-            View Case Studies
+            Explore Team Enablement
           </Link>
         </div>
       </section>

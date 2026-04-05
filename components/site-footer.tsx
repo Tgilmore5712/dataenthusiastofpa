@@ -32,7 +32,7 @@ export function SiteFooter() {
               <Link href="/services" className="hover:text-slate-900">Services</Link>
             </li>
             <li>
-              <Link href="/case-studies" className="hover:text-slate-900">Case Studies</Link>
+              <Link href="/services" className="hover:text-slate-900">Team Enablement</Link>
             </li>
           </ul>
         </div>
