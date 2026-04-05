@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Builder mindset</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">We focus on shipping working automations and applications, not slide decks.</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">We focus on delivering working automations and applications, not slide decks.</p>
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Integration depth</p>

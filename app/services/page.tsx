@@ -44,7 +44,7 @@ export default function ServicesPage() {
       <JsonLd data={serviceSchema()} />
       <h1 className="text-4xl font-bold tracking-tight text-slate-900">Services that move your business forward</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-        Technical implementation services focused on shipping automation and application solutions quickly.
+        Technical implementation services focused on delivering automation and application solutions quickly.
       </p>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         {services.map((service) => (
