@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sql } from "@vercel/postgres";
+import { Pool } from "pg";
 import { ensurePostgresUrl } from "@/lib/postgres";
 
 export const runtime = "nodejs";
@@ -7,6 +7,23 @@ export const runtime = "nodejs";
 type PostgresError = {
   code?: string;
 };
+
+const globalForContactDb = globalThis as typeof globalThis & {
+  contactDbPool?: Pool;
+};
+
+function getContactDbPool(connectionString: string) {
+  if (!globalForContactDb.contactDbPool) {
+    const isLocal = connectionString.includes("localhost") || connectionString.includes("127.0.0.1");
+
+    globalForContactDb.contactDbPool = new Pool({
+      connectionString,
+      ssl: isLocal ? undefined : { rejectUnauthorized: false },
+    });
+  }
+
+  return globalForContactDb.contactDbPool;
+}
 
 function isMissingTableError(error: unknown) {
   if (!error || typeof error !== "object") {
@@ -41,7 +58,10 @@ function getFailureStatusFromCode(code: string) {
 }
 
 async function createContactInquiriesTable() {
-  await sql`
+  const connectionString = ensurePostgresUrl();
+  const pool = getContactDbPool(connectionString);
+
+  await pool.query(`
     CREATE TABLE IF NOT EXISTS public.contact_inquiries (
       id BIGSERIAL PRIMARY KEY,
       name TEXT NOT NULL,
@@ -50,14 +70,20 @@ async function createContactInquiriesTable() {
       message TEXT NOT NULL,
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     )
-  `;
+  `);
 }
 
 async function insertInquiry(name: string, email: string, company: string, message: string) {
-  await sql`
-    INSERT INTO public.contact_inquiries (name, email, company, message)
-    VALUES (${name}, ${email}, ${company || null}, ${message})
-  `;
+  const connectionString = ensurePostgresUrl();
+  const pool = getContactDbPool(connectionString);
+
+  await pool.query(
+    `
+      INSERT INTO public.contact_inquiries (name, email, company, message)
+      VALUES ($1, $2, $3, $4)
+    `,
+    [name, email, company || null, message]
+  );
 }
 
 function readTextValue(formData: FormData, key: string) {
