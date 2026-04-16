@@ -21,6 +21,40 @@ type InquiryRow = {
   created_at: Date | string;
 };
 
+type PostgresError = {
+  code?: string;
+};
+
+function isMissingTableError(error: unknown) {
+  if (!error || typeof error !== "object") {
+    return false;
+  }
+
+  return (error as PostgresError).code === "42P01";
+}
+
+async function createContactInquiriesTable() {
+  await sql`
+    CREATE TABLE IF NOT EXISTS contact_inquiries (
+      id BIGSERIAL PRIMARY KEY,
+      name TEXT NOT NULL,
+      email TEXT NOT NULL,
+      company TEXT,
+      message TEXT NOT NULL,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    )
+  `;
+}
+
+async function getLatestInquiries(limit = 250) {
+  return sql<InquiryRow>`
+    SELECT id, name, email, company, message, created_at
+    FROM contact_inquiries
+    ORDER BY created_at DESC
+    LIMIT ${limit}
+  `;
+}
+
 export const metadata = {
   title: "Admin Inquiries",
   robots: {
@@ -82,28 +116,37 @@ export default async function AdminInquiriesPage({ searchParams }: InquiriesPage
   let dbError = "";
 
   try {
-    await sql`
-      CREATE TABLE IF NOT EXISTS contact_inquiries (
-        id BIGSERIAL PRIMARY KEY,
-        name TEXT NOT NULL,
-        email TEXT NOT NULL,
-        company TEXT,
-        message TEXT NOT NULL,
-        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-      )
-    `;
-
-    const result = await sql<InquiryRow>`
-      SELECT id, name, email, company, message, created_at
-      FROM contact_inquiries
-      ORDER BY created_at DESC
-      LIMIT 250
-    `;
+    const result = await getLatestInquiries(250);
 
     rows = result.rows;
   } catch (error) {
+    if (isMissingTableError(error)) {
+      try {
+        await createContactInquiriesTable();
+        const result = await getLatestInquiries(250);
+        rows = result.rows;
+      } catch (retryError) {
+        console.error("[admin-inquiries] Failed to load inquiries after creating table", retryError);
+        dbError = "Unable to load submissions from the database right now.";
+      }
+    }
+
+    if (dbError) {
+      // keep dbError set by retry flow
+      return (
+        <main className="mx-auto w-full max-w-6xl px-6 py-16">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900">Recent Inquiries</h1>
+          <p className="mt-6 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-900">{dbError}</p>
+        </main>
+      );
+    }
+
+    if (isMissingTableError(error)) {
+      // retry path handled above
+    } else {
     console.error("[admin-inquiries] Failed to load inquiries", error);
     dbError = "Unable to load submissions from the database right now.";
+    }
   }
 
   const fromDate = fromFilter ? new Date(`${fromFilter}T00:00:00`) : null;
