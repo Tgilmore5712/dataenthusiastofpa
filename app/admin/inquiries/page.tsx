@@ -35,7 +35,7 @@ function isMissingTableError(error: unknown) {
 
 async function createContactInquiriesTable() {
   await sql`
-    CREATE TABLE IF NOT EXISTS contact_inquiries (
+    CREATE TABLE IF NOT EXISTS public.contact_inquiries (
       id BIGSERIAL PRIMARY KEY,
       name TEXT NOT NULL,
       email TEXT NOT NULL,
@@ -49,7 +49,7 @@ async function createContactInquiriesTable() {
 async function getLatestInquiries(limit = 250) {
   return sql<InquiryRow>`
     SELECT id, name, email, company, message, created_at
-    FROM contact_inquiries
+    FROM public.contact_inquiries
     ORDER BY created_at DESC
     LIMIT ${limit}
   `;

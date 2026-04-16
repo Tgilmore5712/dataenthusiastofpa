@@ -37,6 +37,21 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           We could not save your inquiry right now. Please email us directly and we will respond quickly.
         </p>
       ) : null}
+      {status === "missing-table" ? (
+        <p className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          Your inquiry storage table is missing in the connected database. Please contact support to complete database setup.
+        </p>
+      ) : null}
+      {status === "permission-error" ? (
+        <p className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          Your inquiry could not be saved because the database user lacks write permissions. Please contact support to update database access.
+        </p>
+      ) : null}
+      {status === "auth-error" ? (
+        <p className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          Your inquiry could not be saved because database authentication failed. Please contact support to update connection credentials.
+        </p>
+      ) : null}
       {status === "config-error" ? (
         <p className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
           The inquiry form is not configured yet. Please email us directly while we finish setup.

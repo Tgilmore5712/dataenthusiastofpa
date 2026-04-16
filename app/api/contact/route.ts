@@ -16,9 +16,33 @@ function isMissingTableError(error: unknown) {
   return (error as PostgresError).code === "42P01";
 }
 
+function getPostgresErrorCode(error: unknown) {
+  if (!error || typeof error !== "object") {
+    return "";
+  }
+
+  return (error as PostgresError).code ?? "";
+}
+
+function getFailureStatusFromCode(code: string) {
+  if (code === "42P01") {
+    return "missing-table";
+  }
+
+  if (code === "42501") {
+    return "permission-error";
+  }
+
+  if (code.startsWith("28")) {
+    return "auth-error";
+  }
+
+  return "db-error";
+}
+
 async function createContactInquiriesTable() {
   await sql`
-    CREATE TABLE IF NOT EXISTS contact_inquiries (
+    CREATE TABLE IF NOT EXISTS public.contact_inquiries (
       id BIGSERIAL PRIMARY KEY,
       name TEXT NOT NULL,
       email TEXT NOT NULL,
@@ -31,7 +55,7 @@ async function createContactInquiriesTable() {
 
 async function insertInquiry(name: string, email: string, company: string, message: string) {
   await sql`
-    INSERT INTO contact_inquiries (name, email, company, message)
+    INSERT INTO public.contact_inquiries (name, email, company, message)
     VALUES (${name}, ${email}, ${company || null}, ${message})
   `;
 }
@@ -68,15 +92,17 @@ export async function POST(request: Request) {
         await createContactInquiriesTable();
         await insertInquiry(name, email, company, message);
       } catch (retryError) {
+        const retryCode = getPostgresErrorCode(retryError);
         console.error("[contact-form] Failed to save inquiry after creating table", retryError);
-        return NextResponse.redirect(new URL("/contact?status=db-error", request.url), 303);
+        return NextResponse.redirect(new URL(`/contact?status=${getFailureStatusFromCode(retryCode)}`, request.url), 303);
       }
 
       return NextResponse.redirect(new URL("/contact?status=success", request.url), 303);
     }
 
+    const code = getPostgresErrorCode(error);
     console.error("[contact-form] Failed to save inquiry", error);
-    return NextResponse.redirect(new URL("/contact?status=db-error", request.url), 303);
+    return NextResponse.redirect(new URL(`/contact?status=${getFailureStatusFromCode(code)}`, request.url), 303);
   }
 
   return NextResponse.redirect(new URL("/contact?status=success", request.url), 303);
