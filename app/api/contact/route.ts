@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { sql } from "@vercel/postgres";
+import { ensurePostgresUrl } from "@/lib/postgres";
 
 export const runtime = "nodejs";
 
@@ -18,6 +19,13 @@ export async function POST(request: Request) {
 
   if (!name || !email || !message) {
     return NextResponse.redirect(new URL("/contact?status=error", request.url), 303);
+  }
+
+  const connectionString = ensurePostgresUrl();
+
+  if (!connectionString) {
+    console.error("[contact-form] Missing database connection string");
+    return NextResponse.redirect(new URL("/contact?status=config-error", request.url), 303);
   }
 
   try {

@@ -37,6 +37,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           We could not save your inquiry right now. Please email us directly and we will respond quickly.
         </p>
       ) : null}
+      {status === "config-error" ? (
+        <p className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          The inquiry form is not configured yet. Please email us directly while we finish setup.
+        </p>
+      ) : null}
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <form className="rounded-2xl border border-slate-200 bg-white p-7" action="/api/contact" method="post">
           <div className="grid gap-4">
