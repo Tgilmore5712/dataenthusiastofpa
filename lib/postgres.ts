@@ -1,5 +1,22 @@
+function normalizeConnectionString(value: string) {
+  const trimmed = value.trim();
+
+  if (!trimmed) {
+    return "";
+  }
+
+  const startsWithQuote = trimmed.startsWith('"') || trimmed.startsWith("'");
+  const endsWithQuote = trimmed.endsWith('"') || trimmed.endsWith("'");
+
+  if (startsWithQuote && endsWithQuote && trimmed.length >= 2) {
+    return trimmed.slice(1, -1).trim();
+  }
+
+  return trimmed;
+}
+
 export function getPostgresConnectionString() {
-  return (
+  return normalizeConnectionString(
     process.env.POSTGRES_URL ??
     process.env.POSTGRES_URL_NON_POOLING ??
     process.env.DATABASE_URL ??
