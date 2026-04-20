@@ -94,6 +94,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 md:p-12">
+        <h2 className="font-serif text-3xl tracking-tight text-slate-900 md:text-4xl">Clear packages, practical ROI</h2>
+        <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-700 md:text-base">
+          We package work around outcomes, not vague AI tasks. Typical engagements range from contained workflow builds to 30-day pilots and ongoing optimization retainers for teams that need continuous improvement.
+        </p>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Audit and Plan</p>
+            <p className="mt-2 text-sm text-slate-700">AI readiness audits starting at $3,500.</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Build and Enable</p>
+            <p className="mt-2 text-sm text-slate-700">Workflow automation builds from $6,000-$15,000 per workflow.</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Optimize Monthly</p>
+            <p className="mt-2 text-sm text-slate-700">Ongoing optimization retainers starting at $2,500/month.</p>
+          </div>
+        </div>
+        <Link
+          href="/services"
+          className="mt-7 inline-flex rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+        >
+          See Full Pricing and Packages
+        </Link>
+      </section>
     </main>
   );
 }

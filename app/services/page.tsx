@@ -38,6 +38,48 @@ const services = [
   },
 ];
 
+const packagedOffers = [
+  {
+    name: "AI Readiness Audit",
+    price: "Starting at $3,500",
+    details:
+      "Opportunity assessment, workflow risk review, ROI model, and implementation roadmap for leaders who need a practical starting point.",
+  },
+  {
+    name: "Workflow Automation Build",
+    price: "$6,000-$15,000 per workflow",
+    details:
+      "Implementation of one contained high-impact workflow across systems like Procore, QuickBooks, email, and spreadsheets.",
+  },
+  {
+    name: "Team AI Upskilling Day",
+    price: "Starting at $4,500",
+    details:
+      "Live role-based training, prompt and SOP templates, and manager guidance so adoption sticks after go-live.",
+  },
+  {
+    name: "30-Day AI Pilot Program",
+    price: "$12,000-$25,000",
+    details:
+      "A focused pilot combining build plus enablement to prove value quickly and create an executable scale plan.",
+  },
+  {
+    name: "Ongoing Optimization Retainer",
+    price: "$2,500-$5,000/month",
+    details:
+      "Continuous optimization, small automation builds, onboarding support, and usage improvements as operations evolve.",
+  },
+];
+
+const investmentBands = [
+  "Contained automation workflow: $3,000-$10,000",
+  "Cross-system automation: $10,000-$30,000",
+  "Multi-department rollouts: $30,000+",
+  "Live team workshops: $1,500-$8,000",
+  "Structured upskilling programs: $5,000-$15,000",
+  "Advisory and managed support: $1,500-$8,000+/month",
+];
+
 export default function ServicesPage() {
   return (
     <main className="mx-auto w-full max-w-6xl px-6 py-16">
@@ -54,6 +96,47 @@ export default function ServicesPage() {
           </article>
         ))}
       </div>
+
+      <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-8">
+        <h2 className="text-2xl font-semibold text-slate-900">Packaged offers for SMB operations teams</h2>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-700">
+          We lead with packaged outcomes instead of vague hourly consulting. Engagements are scoped around measurable improvements in speed, handoffs, visibility, and team adoption.
+        </p>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {packagedOffers.map((offer) => (
+            <article key={offer.name} className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">{offer.price}</p>
+              <h3 className="mt-2 text-lg font-semibold text-slate-900">{offer.name}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">{offer.details}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-8">
+        <h2 className="text-2xl font-semibold text-slate-900">Typical investment bands</h2>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-700">
+          Final pricing depends on system complexity, data quality, stakeholder coordination, and the depth of training required. These ranges help buyers budget realistically.
+        </p>
+        <ul className="mt-5 grid gap-3 text-sm text-slate-700 md:grid-cols-2">
+          {investmentBands.map((band) => (
+            <li key={band} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
+              {band}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-8">
+        <h2 className="text-2xl font-semibold text-slate-900">How we price: business outcomes first</h2>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          We price around value delivered, not generic AI activity. If we can reduce manual admin hours, shorten billing cycles, improve project handoffs, and make reporting visible sooner, the business case becomes clear.
+        </p>
+        <p className="mt-3 text-sm leading-6 text-slate-700">
+          Our strongest model combines implementation plus upskilling so your team can operate and improve the system long term.
+        </p>
+      </section>
+
       <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-white">
         <h2 className="text-2xl font-semibold">Need a tailored build plan?</h2>
         <p className="mt-3 max-w-2xl text-slate-200">
