@@ -6,7 +6,7 @@ import { buildMetadata, serviceSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Services",
   description:
-    "Procore app development, database engineering, and analytics engineering services for construction and operations teams in Pennsylvania and across the U.S.",
+    "Procore app development, database engineering, analytics engineering, and AI upskilling training services for construction and operations teams in Pennsylvania and across the U.S.",
   path: "/services",
 });
 
@@ -35,6 +35,11 @@ const services = [
     name: "Analytics Engineering Services",
     description:
       "Create KPI models, automated pipelines, and dashboards that improve decision-making across project, operations, and finance teams.",
+  },
+  {
+    name: "AI Upskilling and Team Training",
+    description:
+      "Deliver role-based AI training programs, safe usage guidelines, and repeatable workflows so your team can adopt AI with confidence.",
   },
   {
     name: "Team Enablement and Knowledge Transfer",
@@ -92,6 +97,12 @@ const packagedOffers = [
     details:
       "Implementation of ETL/ELT pipelines and data models that unify Procore and operational systems for reliable analytics.",
   },
+  {
+    name: "AI Upskilling Workshop Program",
+    price: "$2,500-$10,000",
+    details:
+      "Role-based AI training sessions, prompt and SOP playbooks, and manager enablement to support safe day-to-day adoption.",
+  },
 ];
 
 const investmentBands = [
@@ -100,6 +111,7 @@ const investmentBands = [
   "Database optimization and schema modernization: $5,000-$20,000",
   "Analytics dashboard and KPI delivery: $6,000-$18,000",
   "Pipeline and warehouse implementation: $12,000-$35,000",
+  "AI upskilling and training programs: $2,500-$10,000",
   "Multi-department rollouts: $30,000+",
   "Role-based team enablement workshops: $1,500-$8,000",
   "Structured Procore upskilling programs: $5,000-$15,000",
@@ -191,6 +203,12 @@ export default function ServicesPage() {
             className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
           >
             Analytics Engineering
+          </Link>
+          <Link
+            href="/services/ai-upskilling-training"
+            className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+          >
+            AI Upskilling Training
           </Link>
         </div>
       </section>

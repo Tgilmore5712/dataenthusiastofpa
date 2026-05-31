@@ -23,6 +23,9 @@ export const siteConfig = {
     "data pipeline development",
     "kpi dashboard development",
     "postgresql consulting",
+    "ai upskilling training",
+    "ai team training",
+    "ai adoption workshop",
     "construction software development",
     "construction operations automation",
     "procore consulting",
@@ -43,6 +46,7 @@ export const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/services/procore-app-development", label: "Procore" },
   { href: "/services/analytics-engineering", label: "Data & Analytics" },
+  { href: "/services/ai-upskilling-training", label: "AI Training" },
   { href: "/industries", label: "Industries" },
   { href: "/contact", label: "Contact" },
 ];

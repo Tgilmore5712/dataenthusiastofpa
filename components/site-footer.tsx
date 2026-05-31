@@ -46,6 +46,9 @@ export function SiteFooter() {
             <li>
               <Link href="/services/analytics-engineering" className="hover:text-slate-900">Analytics Engineering</Link>
             </li>
+            <li>
+              <Link href="/services/ai-upskilling-training" className="hover:text-slate-900">AI Upskilling Training</Link>
+            </li>
           </ul>
         </div>
       </div>

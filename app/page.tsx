@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Procore, Database, and Analytics Engineering",
   description:
-    "Procore app development, database engineering, and analytics engineering services for Pennsylvania construction and operations teams.",
+    "Procore app development, database engineering, analytics engineering, and AI upskilling training for Pennsylvania construction and operations teams.",
   path: "/",
 });
 
@@ -32,7 +32,7 @@ const homeFaqSchema = {
       name: "Do you only build software, or do you train our team too?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We combine implementation and team enablement so your project managers, admins, and operations teams can operate and improve the system after launch.",
+        text: "We combine implementation and team enablement, including AI upskilling training workshops, so your project managers, admins, and operations teams can operate and improve the system after launch.",
       },
     },
     {
@@ -62,7 +62,7 @@ export default function Home() {
           Procore, database, and analytics engineering that eliminates project friction from field to office.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-          We design and deliver Procore-centric workflows, reliable data platforms, and analytics systems for teams that need faster execution and cleaner project visibility.
+          We design and deliver Procore-centric workflows, reliable data platforms, analytics systems, and AI upskilling programs for teams that need faster execution and cleaner project visibility.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
@@ -99,6 +99,19 @@ export default function Home() {
             Build reliable data models, pipelines, and KPI dashboards that turn project data into decisions.
           </p>
         </article>
+      </section>
+
+      <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-8">
+        <h2 className="text-2xl font-semibold text-slate-900">AI Upskilling Training for Your Team</h2>
+        <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-700 md:text-base">
+          We run practical AI upskilling sessions for project, operations, and back-office teams so adoption is safe, role-specific, and measurable after implementation.
+        </p>
+        <Link
+          href="/services/ai-upskilling-training"
+          className="mt-5 inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+        >
+          Explore AI Upskilling Training
+        </Link>
       </section>
 
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 md:p-12">
