@@ -36,6 +36,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/services/procore-app-development", label: "Procore" },
   { href: "/industries", label: "Industries" },
   { href: "/contact", label: "Contact" },
 ];

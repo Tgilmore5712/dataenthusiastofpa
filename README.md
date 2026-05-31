@@ -59,6 +59,25 @@ Notes:
 - The API route also runs `CREATE TABLE IF NOT EXISTS` on submit, so first submission can self-initialize the table.
 - If database connection fails, users are redirected to `/contact?status=db-error`.
 
+## Built-In Analytics (Database-Backed)
+
+This project now includes built-in analytics event capture to PostgreSQL:
+
+- Client page views are recorded via `POST /api/analytics`
+- Contact form submissions are additionally recorded as `inquiry_submitted` events
+- Admin analytics dashboard: `/admin/analytics?key=YOUR_ADMIN_DASHBOARD_KEY`
+
+Required environment variables:
+
+```bash
+POSTGRES_URL=postgres://...
+ADMIN_DASHBOARD_KEY=your_secure_admin_key
+```
+
+Analytics table schema reference:
+
+- `db/schema.sql` (`analytics_events`)
+
 ## SEO Checklist
 
 1. Confirm `NEXT_PUBLIC_SITE_URL` matches the production domain.

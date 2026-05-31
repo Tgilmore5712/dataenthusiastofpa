@@ -73,6 +73,26 @@ async function createContactInquiriesTable() {
   `);
 }
 
+async function createAnalyticsEventsTable() {
+  const connectionString = ensurePostgresUrl();
+  const pool = getContactDbPool(connectionString);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS public.analytics_events (
+      id BIGSERIAL PRIMARY KEY,
+      event_name TEXT NOT NULL,
+      path TEXT NOT NULL,
+      referrer TEXT,
+      utm_source TEXT,
+      utm_medium TEXT,
+      utm_campaign TEXT,
+      page_title TEXT,
+      user_agent TEXT,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    )
+  `);
+}
+
 async function insertInquiry(name: string, email: string, company: string, message: string) {
   const connectionString = ensurePostgresUrl();
   const pool = getContactDbPool(connectionString);
@@ -83,6 +103,19 @@ async function insertInquiry(name: string, email: string, company: string, messa
       VALUES ($1, $2, $3, $4)
     `,
     [name, email, company || null, message]
+  );
+}
+
+async function insertInquiryAnalyticsEvent() {
+  const connectionString = ensurePostgresUrl();
+  const pool = getContactDbPool(connectionString);
+
+  await pool.query(
+    `
+      INSERT INTO public.analytics_events (event_name, path)
+      VALUES ($1, $2)
+    `,
+    ["inquiry_submitted", "/contact"]
   );
 }
 
@@ -112,11 +145,41 @@ export async function POST(request: Request) {
 
   try {
     await insertInquiry(name, email, company, message);
+
+    try {
+      await insertInquiryAnalyticsEvent();
+    } catch (analyticsError) {
+      if (isMissingTableError(analyticsError)) {
+        try {
+          await createAnalyticsEventsTable();
+          await insertInquiryAnalyticsEvent();
+        } catch (analyticsRetryError) {
+          console.error("[contact-form] Failed to record inquiry analytics event", analyticsRetryError);
+        }
+      } else {
+        console.error("[contact-form] Failed to record inquiry analytics event", analyticsError);
+      }
+    }
   } catch (error) {
     if (isMissingTableError(error)) {
       try {
         await createContactInquiriesTable();
         await insertInquiry(name, email, company, message);
+
+        try {
+          await insertInquiryAnalyticsEvent();
+        } catch (analyticsError) {
+          if (isMissingTableError(analyticsError)) {
+            try {
+              await createAnalyticsEventsTable();
+              await insertInquiryAnalyticsEvent();
+            } catch (analyticsRetryError) {
+              console.error("[contact-form] Failed to record inquiry analytics event", analyticsRetryError);
+            }
+          } else {
+            console.error("[contact-form] Failed to record inquiry analytics event", analyticsError);
+          }
+        }
       } catch (retryError) {
         const retryCode = getPostgresErrorCode(retryError);
         console.error("[contact-form] Failed to save inquiry after creating table", retryError);

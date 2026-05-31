@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Source_Serif_4 } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { AnalyticsTracker } from "@/components/analytics-tracker";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -73,6 +74,7 @@ export default function RootLayout({
       className={`${manrope.variable} ${sourceSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-slate-100 text-slate-900">
+        <AnalyticsTracker />
         <div className="min-h-full bg-[radial-gradient(circle_at_top,_#dbeafe_0%,_#f8fafc_45%,_#f1f5f9_100%)]">
           <SiteHeader />
           {children}

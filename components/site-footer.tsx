@@ -32,7 +32,13 @@ export function SiteFooter() {
               <Link href="/services" className="hover:text-slate-900">Services</Link>
             </li>
             <li>
-              <Link href="/services" className="hover:text-slate-900">Team Enablement</Link>
+              <Link href="/services/procore-app-development" className="hover:text-slate-900">Procore App Development</Link>
+            </li>
+            <li>
+              <Link href="/services/procore-workflow-automation" className="hover:text-slate-900">Procore Workflow Automation</Link>
+            </li>
+            <li>
+              <Link href="/services/procore-integration-pennsylvania" className="hover:text-slate-900">Procore Integration Services</Link>
             </li>
           </ul>
         </div>
