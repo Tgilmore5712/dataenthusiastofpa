@@ -18,7 +18,7 @@ export function SiteHeader() {
         </div>
         <nav
           aria-label="Primary navigation"
-          className="flex items-center gap-5 overflow-x-auto whitespace-nowrap text-sm font-medium text-slate-700 md:gap-6"
+          className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-700 md:flex-nowrap md:gap-6"
         >
           {navLinks.map((link) => (
             <Link
