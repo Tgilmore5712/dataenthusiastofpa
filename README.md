@@ -67,6 +67,23 @@ Notes:
 4. Run Lighthouse and target high scores in Performance, SEO, and Accessibility.
 5. Add analytics and conversion tracking after go-live.
 
+## Search Console and Bing Verification
+
+Set verification tokens as environment variables in your host (for example, Vercel Project Settings -> Environment Variables):
+
+```bash
+GOOGLE_SITE_VERIFICATION=your_google_token
+BING_SITE_VERIFICATION=your_bing_token
+```
+
+After deployment:
+
+1. Open Google Search Console and add property `https://www.dataenthusiastofpa.com`.
+2. Choose HTML tag verification and confirm the generated token matches `GOOGLE_SITE_VERIFICATION`.
+3. In Bing Webmaster Tools, add the same site and choose meta tag verification.
+4. Confirm the Bing token matches `BING_SITE_VERIFICATION`.
+5. Submit `https://www.dataenthusiastofpa.com/sitemap.xml` in both tools.
+
 ## Content Editing
 
 - Homepage content: app/page.tsx

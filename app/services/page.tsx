@@ -4,9 +4,9 @@ import { JsonLd } from "@/components/json-ld";
 import { buildMetadata, serviceSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services | Data Enthusiast of PA Business Solutions",
+  title: "Services",
   description:
-    "Workflow automation, custom web and mobile development, Procore integrations, QBO integration services, and team enablement.",
+    "Workflow automation services, custom web and mobile development, Procore integrations, QBO integration services, and team enablement for growing teams.",
   path: "/services",
 });
 
@@ -135,6 +135,12 @@ export default function ServicesPage() {
         <p className="mt-3 text-sm leading-6 text-slate-700">
           Our strongest model combines implementation plus upskilling so your team can operate and improve the system long term.
         </p>
+        <Link
+          href="/services/procore-integration-pennsylvania"
+          className="mt-6 inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+        >
+          See Procore Integration Services in Pennsylvania
+        </Link>
       </section>
 
       <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-white">

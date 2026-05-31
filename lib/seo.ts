@@ -39,14 +39,29 @@ export function buildMetadata({
 
 export function organizationSchema() {
   const sameAs = [siteConfig.social.linkedin].filter(Boolean);
+  const logoUrl = `${siteConfig.url}${siteConfig.logoPath}`;
 
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.legalName,
     url: siteConfig.url,
+    logo: logoUrl,
+    image: logoUrl,
     telephone: siteConfig.phone,
     email: siteConfig.email,
+    areaServed: siteConfig.serviceAreas,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        telephone: siteConfig.phone,
+        email: siteConfig.email,
+        areaServed: siteConfig.serviceAreas,
+        availableLanguage: ["en"],
+      },
+    ],
     ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 }
@@ -55,10 +70,30 @@ export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#localbusiness`,
     name: siteConfig.name,
+    url: siteConfig.url,
+    image: `${siteConfig.url}${siteConfig.logoPath}`,
+    areaServed: siteConfig.serviceAreas.map((area) => ({
+      "@type": "AdministrativeArea",
+      name: area,
+    })),
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: siteConfig.region,
+      addressCountry: siteConfig.countryCode,
+    },
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    url: siteConfig.url,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        telephone: siteConfig.phone,
+        email: siteConfig.email,
+        availableLanguage: ["en"],
+      },
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -80,13 +115,16 @@ export function serviceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${siteConfig.url}/services#primary-service`,
+    name: "Workflow Automation and Custom Software Development",
     serviceType: "Workflow Automation and Software Development",
     provider: {
       "@type": "Organization",
+      "@id": `${siteConfig.url}/#organization`,
       name: siteConfig.legalName,
       url: siteConfig.url,
     },
-    areaServed: "United States",
+    areaServed: siteConfig.serviceAreas,
     description:
       "Automation workflows, custom web and mobile app development, Procore solutions, and QuickBooks Online integrations.",
   };

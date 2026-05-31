@@ -11,9 +11,40 @@ import {
 export const metadata: Metadata = buildMetadata({
   title: "Automation Workflows, Web and App Development",
   description:
-    "Workflow automation, custom web and mobile apps, Procore development, and QuickBooks Online integrations with team enablement built in.",
+    "Pennsylvania workflow automation services, custom web and mobile apps, Procore development, and QuickBooks Online integrations with team enablement built in.",
   path: "/",
 });
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What types of businesses do you work with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We work with construction, logistics, fulfillment, finance, and operations-led businesses in Pennsylvania and across the United States.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you only build software, or do you train our team too?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We combine implementation and team enablement so your employees can operate and improve the systems after launch.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you integrate Procore and QuickBooks Online?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We build Procore and QuickBooks Online integrations, plus broader API-based workflow automation across your business systems.",
+      },
+    },
+  ],
+};
 
 export default function Home() {
   return (
@@ -21,6 +52,7 @@ export default function Home() {
       <JsonLd data={organizationSchema()} />
       <JsonLd data={localBusinessSchema()} />
       <JsonLd data={serviceSchema()} />
+      <JsonLd data={homeFaqSchema} />
 
       <section className="rounded-3xl bg-slate-900 px-8 py-14 text-white md:px-14">
         <p className="inline-flex rounded-full border border-slate-500 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200">
@@ -30,7 +62,7 @@ export default function Home() {
           We build automation workflows, web apps, and mobile apps that eliminate manual work.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-          From Procore development to QuickBooks Online integrations, we implement practical systems and upskill your team so the capability stays in-house.
+          From Pennsylvania operations teams to national service businesses, we implement practical systems and upskill your team so the capability stays in-house.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link

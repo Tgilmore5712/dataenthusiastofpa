@@ -2,8 +2,12 @@ export const siteConfig = {
   name: "Data Enthusiast of PA Business Solutions",
   legalName: "Data Enthusiast of PA Business Solutions LLC",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dataenthusiastofpa.com",
+  region: "Pennsylvania",
+  countryCode: "US",
+  serviceAreas: ["Pennsylvania", "United States"],
   phone: "717-802-9344",
   email: "Todd@dataenthusiastofpa.com",
+  logoPath: "/icon.png",
   social: {
     linkedin: "https://www.linkedin.com/in/todd-gilmore-86208153",
   },

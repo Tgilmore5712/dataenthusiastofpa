@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact | Data Enthusiast of PA Business Solutions",
+  title: "Contact",
   description:
-    "Contact our team for workflow automation, app development, and team enablement that helps your staff own the solution long term.",
+    "Contact our Pennsylvania team for workflow automation, custom software development, and team enablement that helps your staff own the solution long term.",
   path: "/contact",
 });
 
@@ -20,7 +20,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
     <main className="mx-auto w-full max-w-6xl px-6 py-16">
       <h1 className="text-4xl font-bold tracking-tight text-slate-900">Let us build with your team, not around it</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-        You have strong employees. We help close skill gaps in a fast-changing environment, implement quickly, and transfer knowledge so your team keeps the capability after launch.
+        You have strong employees. We help Pennsylvania and U.S. teams close skill gaps in a fast-changing environment, implement quickly, and transfer knowledge so your team keeps the capability after launch.
       </p>
       {status === "success" ? (
         <p className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">

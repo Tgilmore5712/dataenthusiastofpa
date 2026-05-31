@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Industries | Data Enthusiast of PA Business Solutions",
+  title: "Industries",
   description:
-    "Automation and app development expertise for construction, logistics, fulfillment, operations, and service businesses.",
+    "Automation and app development expertise for construction, logistics, fulfillment, operations, and service businesses in Pennsylvania and across the U.S.",
   path: "/industries",
 });
 
@@ -22,7 +22,7 @@ export default function IndustriesPage() {
     <main className="mx-auto w-full max-w-6xl px-6 py-16">
       <h1 className="text-4xl font-bold tracking-tight text-slate-900">Industry context plus technical delivery</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-        We build systems for teams that manage complex operations, large data sets, and tight execution timelines.
+        We build systems for teams that manage complex operations, large data sets, and tight execution timelines in Pennsylvania and across the United States.
       </p>
       <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {industries.map((industry) => (

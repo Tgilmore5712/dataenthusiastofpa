@@ -15,6 +15,9 @@ const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
 });
 
+const googleVerificationToken = process.env.GOOGLE_SITE_VERIFICATION?.trim();
+const bingVerificationToken = process.env.BING_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -47,6 +50,16 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   category: "business",
+  verification: {
+    ...(googleVerificationToken ? { google: googleVerificationToken } : {}),
+    ...(bingVerificationToken
+      ? {
+          other: {
+            "msvalidate.01": bingVerificationToken,
+          },
+        }
+      : {}),
+  },
 };
 
 export default function RootLayout({
