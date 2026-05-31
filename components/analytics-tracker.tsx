@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 type AnalyticsPayload = {
   eventName: "page_view";
@@ -27,7 +27,6 @@ function toPayload(pathname: string, searchParams: URLSearchParams): AnalyticsPa
 
 export function AnalyticsTracker() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const lastTrackedPathRef = useRef("");
 
   useEffect(() => {
@@ -41,7 +40,8 @@ export function AnalyticsTracker() {
 
     lastTrackedPathRef.current = pathname;
 
-    const payload = toPayload(pathname, searchParams);
+    const currentSearchParams = new URLSearchParams(window.location.search);
+    const payload = toPayload(pathname, currentSearchParams);
     const body = JSON.stringify(payload);
 
     if (navigator.sendBeacon) {
@@ -57,7 +57,7 @@ export function AnalyticsTracker() {
       body,
       keepalive: true,
     });
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 }
