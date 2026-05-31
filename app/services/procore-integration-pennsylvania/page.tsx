@@ -6,13 +6,13 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Procore Integration Services in Pennsylvania",
   description:
-    "Procore integration services for Pennsylvania construction teams. Automate workflows, connect QuickBooks Online, and reduce manual project administration.",
+    "Procore integration services for Pennsylvania construction teams. Automate workflows, connect core systems, and reduce manual project administration.",
   path: "/services/procore-integration-pennsylvania",
   keywords: [
     "procore integration services",
     "procore api development",
     "procore consulting pennsylvania",
-    "quickbooks procore integration",
+    "procore system integration",
     "construction workflow automation",
     "construction software integration",
   ],
@@ -30,7 +30,7 @@ const procoreServiceSchema = {
     url: "https://www.dataenthusiastofpa.com",
   },
   description:
-    "Custom Procore integrations, workflow automation, and QuickBooks Online connectivity for construction and field operations teams.",
+    "Custom Procore integrations and workflow automation for construction and field operations teams.",
 };
 
 const faqSchema = {
@@ -39,10 +39,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Can you integrate Procore with QuickBooks Online?",
+      name: "Can you integrate Procore with our accounting or ERP system?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We build secure integrations that sync project financial and operational data between Procore and QuickBooks Online to reduce duplicate entry and reporting delays.",
+        text: "Yes. We design secure integrations between Procore and your accounting, ERP, and internal systems to reduce duplicate entry and reporting delays.",
       },
     },
     {
@@ -78,7 +78,7 @@ export default function ProcoreIntegrationPennsylvaniaPage() {
           Procore Integration Services in Pennsylvania
         </h1>
         <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300 md:text-lg">
-          We help construction and field operations teams connect Procore with QuickBooks Online and other systems to remove manual handoffs, improve project visibility, and speed financial reporting.
+          We help construction and field operations teams connect Procore with critical business systems to remove manual handoffs, improve project visibility, and speed decision-making.
         </p>
         <Link
           href="/contact"
@@ -96,9 +96,9 @@ export default function ProcoreIntegrationPennsylvaniaPage() {
           </p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6">
-          <h2 className="text-lg font-semibold text-slate-900">Procore + QuickBooks Sync</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Cross-System Procore Sync</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Reduce duplicate entry and reconcile faster by syncing financial data between Procore and QuickBooks Online.
+            Reduce duplicate entry and improve reporting quality by synchronizing data across Procore and connected systems.
           </p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6">

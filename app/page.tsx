@@ -9,9 +9,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Automation Workflows, Web and App Development",
+  title: "Procore App Development and Workflow Automation",
   description:
-    "Pennsylvania workflow automation services, custom web and mobile apps, Procore development, and QuickBooks Online integrations with team enablement built in.",
+    "Procore app development services for Pennsylvania construction teams, including workflow automation, API integrations, and field-to-office process improvement.",
   path: "/",
 });
 
@@ -21,10 +21,10 @@ const homeFaqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What types of businesses do you work with?",
+      name: "What Procore development services do you offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work with construction, logistics, fulfillment, finance, and operations-led businesses in Pennsylvania and across the United States.",
+        text: "We build custom Procore apps, workflow automations, API integrations, and reporting workflows for construction operations teams.",
       },
     },
     {
@@ -32,15 +32,15 @@ const homeFaqSchema = {
       name: "Do you only build software, or do you train our team too?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We combine implementation and team enablement so your employees can operate and improve the systems after launch.",
+        text: "We combine implementation and team enablement so your project managers, admins, and operations teams can operate and improve the system after launch.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you integrate Procore and QuickBooks Online?",
+      name: "Do you handle integrations beyond Procore?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We build Procore and QuickBooks Online integrations, plus broader API-based workflow automation across your business systems.",
+        text: "Yes. We are Procore-first, and we also connect Procore to accounting, ERP, and internal systems when that is required for full workflow continuity.",
       },
     },
   ],
@@ -56,13 +56,13 @@ export default function Home() {
 
       <section className="rounded-3xl bg-slate-900 px-8 py-14 text-white md:px-14">
         <p className="inline-flex rounded-full border border-slate-500 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200">
-          Automation and Product Engineering
+          Construction Technology Partner
         </p>
         <h1 className="mt-7 max-w-4xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-          We build automation workflows, web apps, and mobile apps that eliminate manual work.
+          Procore app development that eliminates project friction from field to office.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-          From Pennsylvania operations teams to national service businesses, we implement practical systems and upskill your team so the capability stays in-house.
+          We design and deliver Procore-centric workflows, custom apps, and integration architecture for construction teams that need faster execution and cleaner project visibility.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
@@ -72,37 +72,37 @@ export default function Home() {
             Talk to an Expert
           </Link>
           <Link
-            href="/services"
+            href="/services/procore-app-development"
             className="rounded-full border border-slate-400 px-6 py-3 text-sm font-semibold text-white transition hover:border-amber-300 hover:text-amber-200"
           >
-            Explore Team Enablement
+            Explore Procore App Development
           </Link>
         </div>
       </section>
 
       <section className="mt-12 grid gap-6 md:grid-cols-3">
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Workflow Automation</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Procore App Development</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Automate repetitive back-office processes across operations, finance, and project teams.
+            Custom Procore apps and role-based workflows for PMs, supers, and operations leaders.
           </p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Web and App Builds</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Procore Workflow Automation</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Design and delivery of custom web platforms, field apps, and internal business tools.
+            Automate RFIs, submittals, approvals, document handoffs, and reporting cycles.
           </p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Platform Integrations</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Procore API Integrations</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Procore development, QBO integrations, and API connections that keep systems in sync.
+            Connect Procore with accounting, ERP, and internal systems to keep project data consistent.
           </p>
         </article>
       </section>
 
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 md:p-12">
-        <h2 className="font-serif text-3xl tracking-tight text-slate-900 md:text-4xl">Why enterprise teams choose us</h2>
+        <h2 className="font-serif text-3xl tracking-tight text-slate-900 md:text-4xl">Why construction teams choose us</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           <div className="rounded-xl bg-slate-50 p-5 md:col-span-2">
             <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Team enablement model</p>
@@ -110,11 +110,11 @@ export default function Home() {
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Builder mindset</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">We focus on delivering working automations and applications, not slide decks.</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">We focus on shipping production-ready Procore solutions, not strategy slides.</p>
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Integration depth</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Strong experience with Procore APIs, QBO, and multi-system workflow orchestration.</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">Strong depth in Procore APIs, event-driven automation, and cross-platform construction operations architecture.</p>
           </div>
           <div className="rounded-xl bg-slate-50 p-5">
             <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">Fast implementation</p>
@@ -128,22 +128,22 @@ export default function Home() {
       </section>
 
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-8 md:p-12">
-        <h2 className="font-serif text-3xl tracking-tight text-slate-900 md:text-4xl">Clear packages, practical ROI</h2>
+        <h2 className="font-serif text-3xl tracking-tight text-slate-900 md:text-4xl">Procore-focused packages with practical ROI</h2>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-700 md:text-base">
-          We package work around outcomes, not vague AI tasks. Typical engagements range from contained workflow builds to 30-day pilots and ongoing optimization retainers for teams that need continuous improvement.
+          We package work around Procore outcomes, not vague consulting hours. Engagements range from contained app builds to workflow automation pilots and ongoing optimization retainers.
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Audit and Plan</p>
-            <p className="mt-2 text-sm text-slate-700">AI readiness audits starting at $3,500.</p>
+            <p className="mt-2 text-sm text-slate-700">Procore discovery and architecture sprints starting at $3,500.</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Build and Enable</p>
-            <p className="mt-2 text-sm text-slate-700">Workflow automation builds from $6,000-$15,000 per workflow.</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Build and Deploy</p>
+            <p className="mt-2 text-sm text-slate-700">Procore app and workflow builds from $6,000-$20,000 per implementation.</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-5">
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Optimize Monthly</p>
-            <p className="mt-2 text-sm text-slate-700">Ongoing optimization retainers starting at $2,500/month.</p>
+            <p className="mt-2 text-sm text-slate-700">Ongoing Procore optimization retainers starting at $2,500/month.</p>
           </div>
         </div>
         <Link

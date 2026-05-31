@@ -6,30 +6,30 @@ import { buildMetadata, serviceSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Services",
   description:
-    "Workflow automation services, custom web and mobile development, Procore integrations, QBO integration services, and team enablement for growing teams.",
+    "Procore app development services, Procore workflow automation, and Procore API integrations for construction operations teams in Pennsylvania and across the U.S.",
   path: "/services",
 });
 
 const services = [
   {
-    name: "Workflow Automation and AI Operations",
+    name: "Procore Custom App Development",
     description:
-      "Design and implementation of automation workflows that remove repetitive tasks from operations, finance, and project teams.",
+      "Design and build custom Procore app experiences for project management, field operations, and leadership reporting.",
   },
   {
-    name: "Custom Web and Mobile App Development",
+    name: "Procore Workflow Automation",
     description:
-      "Build production-ready internal tools, customer portals, and field apps tailored to your workflows.",
+      "Automate RFIs, submittals, approvals, and document workflows to reduce manual coordination and cycle times.",
   },
   {
-    name: "Procore Development and API Integrations",
+    name: "Procore API Integrations",
     description:
-      "Extend Procore with custom workflows, syncs, and data integrations that fit your project operations.",
+      "Connect Procore with accounting, ERP, reporting, and internal systems to keep project and financial data aligned.",
   },
   {
-    name: "QuickBooks Online (QBO) Integrations",
+    name: "Construction Systems Integration",
     description:
-      "Connect QBO with your systems to automate billing, reconciliations, and financial reporting workflows.",
+      "Extend Procore-centric architecture across scheduling, estimating, procurement, and back-office systems.",
   },
   {
     name: "Team Enablement and Knowledge Transfer",
@@ -40,44 +40,44 @@ const services = [
 
 const packagedOffers = [
   {
-    name: "AI Readiness Audit",
+    name: "Procore Discovery Sprint",
     price: "Starting at $3,500",
     details:
-      "Opportunity assessment, workflow risk review, ROI model, and implementation roadmap for leaders who need a practical starting point.",
+      "Current-state workflow mapping, integration architecture, ROI model, and a practical Procore implementation roadmap.",
   },
   {
-    name: "Workflow Automation Build",
-    price: "$6,000-$15,000 per workflow",
+    name: "Procore Workflow Build",
+    price: "$6,000-$20,000 per workflow",
     details:
-      "Implementation of one contained high-impact workflow across systems like Procore, QuickBooks, email, and spreadsheets.",
+      "Build and deployment of one high-impact Procore workflow with testing, documentation, and rollout support.",
   },
   {
-    name: "Team AI Upskilling Day",
+    name: "Procore App Build",
     price: "Starting at $4,500",
     details:
-      "Live role-based training, prompt and SOP templates, and manager guidance so adoption sticks after go-live.",
+      "Role-specific app features and dashboards to support PM, field, and operations workflows in one practical release.",
   },
   {
-    name: "30-Day AI Pilot Program",
+    name: "Procore Integration Pilot",
     price: "$12,000-$25,000",
     details:
-      "A focused pilot combining build plus enablement to prove value quickly and create an executable scale plan.",
+      "A focused integration pilot to validate data sync reliability, reporting consistency, and adoption before scale-out.",
   },
   {
-    name: "Ongoing Optimization Retainer",
+    name: "Ongoing Procore Optimization Retainer",
     price: "$2,500-$5,000/month",
     details:
-      "Continuous optimization, small automation builds, onboarding support, and usage improvements as operations evolve.",
+      "Continuous workflow optimization, monthly enhancements, and team support as operations and project volume evolve.",
   },
 ];
 
 const investmentBands = [
-  "Contained automation workflow: $3,000-$10,000",
-  "Cross-system automation: $10,000-$30,000",
+  "Contained Procore workflow: $3,000-$10,000",
+  "Cross-system Procore integration: $10,000-$30,000",
   "Multi-department rollouts: $30,000+",
-  "Live team workshops: $1,500-$8,000",
-  "Structured upskilling programs: $5,000-$15,000",
-  "Advisory and managed support: $1,500-$8,000+/month",
+  "Role-based team enablement workshops: $1,500-$8,000",
+  "Structured Procore upskilling programs: $5,000-$15,000",
+  "Advisory and managed optimization: $1,500-$8,000+/month",
 ];
 
 export default function ServicesPage() {
@@ -86,7 +86,7 @@ export default function ServicesPage() {
       <JsonLd data={serviceSchema()} />
       <h1 className="text-4xl font-bold tracking-tight text-slate-900">Services that move your business forward</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-        Technical implementation services focused on delivering automation and application solutions quickly.
+        Procore-first technical implementation services for construction teams that need cleaner execution from field to office.
       </p>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         {services.map((service) => (
@@ -98,9 +98,9 @@ export default function ServicesPage() {
       </div>
 
       <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-8">
-        <h2 className="text-2xl font-semibold text-slate-900">Packaged offers for SMB operations teams</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Packaged offers for Procore operations teams</h2>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-700">
-          We lead with packaged outcomes instead of vague hourly consulting. Engagements are scoped around measurable improvements in speed, handoffs, visibility, and team adoption.
+          We lead with packaged outcomes instead of vague hourly consulting. Engagements are scoped around measurable improvements in handoff speed, project visibility, and adoption.
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {packagedOffers.map((offer) => (
@@ -130,17 +130,31 @@ export default function ServicesPage() {
       <section className="mt-10 rounded-2xl border border-amber-200 bg-amber-50 p-8">
         <h2 className="text-2xl font-semibold text-slate-900">How we price: business outcomes first</h2>
         <p className="mt-3 text-sm leading-6 text-slate-700">
-          We price around value delivered, not generic AI activity. If we can reduce manual admin hours, shorten billing cycles, improve project handoffs, and make reporting visible sooner, the business case becomes clear.
+          We price around value delivered, not generic platform activity. If we reduce admin overhead, tighten project handoffs, and improve reporting velocity, the business case is clear.
         </p>
         <p className="mt-3 text-sm leading-6 text-slate-700">
-          Our strongest model combines implementation plus upskilling so your team can operate and improve the system long term.
+          Our strongest model combines implementation plus upskilling so your team can operate and improve your Procore ecosystem long term.
         </p>
-        <Link
-          href="/services/procore-integration-pennsylvania"
-          className="mt-6 inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
-        >
-          See Procore Integration Services in Pennsylvania
-        </Link>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/services/procore-app-development"
+            className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+          >
+            Procore App Development
+          </Link>
+          <Link
+            href="/services/procore-workflow-automation"
+            className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+          >
+            Procore Workflow Automation
+          </Link>
+          <Link
+            href="/services/procore-integration-pennsylvania"
+            className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+          >
+            Procore Integration Services
+          </Link>
+        </div>
       </section>
 
       <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-white">
