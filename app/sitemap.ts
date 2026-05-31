@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/procore-app-development",
     "/services/procore-workflow-automation",
     "/services/procore-integration-pennsylvania",
+    "/services/database-engineering",
+    "/services/analytics-engineering",
     "/industries",
     "/contact",
   ];

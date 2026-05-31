@@ -11,13 +11,18 @@ export const siteConfig = {
   social: {
     linkedin: "https://www.linkedin.com/in/todd-gilmore-86208153",
   },
-  defaultTitle: "Procore App Development and Workflow Automation",
+  defaultTitle: "Procore, Database, and Analytics Engineering",
   defaultDescription:
-    "Data Enthusiast of PA builds Procore apps, Procore workflow automations, and connected construction operations systems for teams in Pennsylvania and across the U.S.",
+    "Data Enthusiast of PA builds Procore apps, database systems, and analytics engineering solutions for construction and operations teams in Pennsylvania and across the U.S.",
   keywords: [
     "procore app development",
     "procore workflow automation",
     "procore api development",
+    "database engineering services",
+    "analytics engineering services",
+    "data pipeline development",
+    "kpi dashboard development",
+    "postgresql consulting",
     "construction software development",
     "construction operations automation",
     "procore consulting",
@@ -37,6 +42,7 @@ export const navLinks = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/services/procore-app-development", label: "Procore" },
+  { href: "/services/analytics-engineering", label: "Data & Analytics" },
   { href: "/industries", label: "Industries" },
   { href: "/contact", label: "Contact" },
 ];

@@ -9,9 +9,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Procore App Development and Workflow Automation",
+  title: "Procore, Database, and Analytics Engineering",
   description:
-    "Procore app development services for Pennsylvania construction teams, including workflow automation, API integrations, and field-to-office process improvement.",
+    "Procore app development, database engineering, and analytics engineering services for Pennsylvania construction and operations teams.",
   path: "/",
 });
 
@@ -59,10 +59,10 @@ export default function Home() {
           Construction Technology Partner
         </p>
         <h1 className="mt-7 max-w-4xl font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-          Procore app development that eliminates project friction from field to office.
+          Procore, database, and analytics engineering that eliminates project friction from field to office.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg">
-          We design and deliver Procore-centric workflows, custom apps, and integration architecture for construction teams that need faster execution and cleaner project visibility.
+          We design and deliver Procore-centric workflows, reliable data platforms, and analytics systems for teams that need faster execution and cleaner project visibility.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
@@ -94,9 +94,9 @@ export default function Home() {
           </p>
         </article>
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-900">Procore API Integrations</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Database and Analytics Engineering</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            Connect Procore with accounting, ERP, and internal systems to keep project data consistent.
+            Build reliable data models, pipelines, and KPI dashboards that turn project data into decisions.
           </p>
         </article>
       </section>

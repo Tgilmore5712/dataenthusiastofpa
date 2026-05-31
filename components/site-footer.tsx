@@ -40,6 +40,12 @@ export function SiteFooter() {
             <li>
               <Link href="/services/procore-integration-pennsylvania" className="hover:text-slate-900">Procore Integration Services</Link>
             </li>
+            <li>
+              <Link href="/services/database-engineering" className="hover:text-slate-900">Database Engineering</Link>
+            </li>
+            <li>
+              <Link href="/services/analytics-engineering" className="hover:text-slate-900">Analytics Engineering</Link>
+            </li>
           </ul>
         </div>
       </div>

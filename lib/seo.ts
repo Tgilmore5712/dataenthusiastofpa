@@ -116,8 +116,8 @@ export function serviceSchema() {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${siteConfig.url}/services#primary-service`,
-    name: "Procore App Development and Workflow Automation",
-    serviceType: "Procore App Development, Workflow Automation, and API Integration",
+    name: "Procore, Database, and Analytics Engineering Services",
+    serviceType: "Procore App Development, Database Engineering, and Analytics Engineering",
     provider: {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
@@ -126,6 +126,6 @@ export function serviceSchema() {
     },
     areaServed: siteConfig.serviceAreas,
     description:
-      "Procore app development, Procore workflow automation, and API integrations for construction operations teams.",
+      "Procore app development, database engineering, and analytics engineering services for construction and operations teams.",
   };
 }

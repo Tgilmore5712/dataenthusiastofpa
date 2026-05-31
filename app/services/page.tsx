@@ -6,7 +6,7 @@ import { buildMetadata, serviceSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Services",
   description:
-    "Procore app development services, Procore workflow automation, and Procore API integrations for construction operations teams in Pennsylvania and across the U.S.",
+    "Procore app development, database engineering, and analytics engineering services for construction and operations teams in Pennsylvania and across the U.S.",
   path: "/services",
 });
 
@@ -27,9 +27,14 @@ const services = [
       "Connect Procore with accounting, ERP, reporting, and internal systems to keep project and financial data aligned.",
   },
   {
-    name: "Construction Systems Integration",
+    name: "Database Engineering Services",
     description:
-      "Extend Procore-centric architecture across scheduling, estimating, procurement, and back-office systems.",
+      "Design data models, optimize query performance, and build resilient data foundations across operational systems.",
+  },
+  {
+    name: "Analytics Engineering Services",
+    description:
+      "Create KPI models, automated pipelines, and dashboards that improve decision-making across project, operations, and finance teams.",
   },
   {
     name: "Team Enablement and Knowledge Transfer",
@@ -69,11 +74,32 @@ const packagedOffers = [
     details:
       "Continuous workflow optimization, monthly enhancements, and team support as operations and project volume evolve.",
   },
+  {
+    name: "Database and Analytics Audit",
+    price: "Starting at $4,000",
+    details:
+      "Schema review, query bottleneck analysis, KPI alignment, and a prioritized execution plan for data reliability and reporting improvements.",
+  },
+  {
+    name: "KPI Dashboard Sprint",
+    price: "$6,000-$15,000",
+    details:
+      "Rapid delivery of executive and operations dashboards with documented metric definitions and data quality checks.",
+  },
+  {
+    name: "Pipeline and Warehouse Build",
+    price: "$12,000-$35,000",
+    details:
+      "Implementation of ETL/ELT pipelines and data models that unify Procore and operational systems for reliable analytics.",
+  },
 ];
 
 const investmentBands = [
   "Contained Procore workflow: $3,000-$10,000",
   "Cross-system Procore integration: $10,000-$30,000",
+  "Database optimization and schema modernization: $5,000-$20,000",
+  "Analytics dashboard and KPI delivery: $6,000-$18,000",
+  "Pipeline and warehouse implementation: $12,000-$35,000",
   "Multi-department rollouts: $30,000+",
   "Role-based team enablement workshops: $1,500-$8,000",
   "Structured Procore upskilling programs: $5,000-$15,000",
@@ -86,7 +112,7 @@ export default function ServicesPage() {
       <JsonLd data={serviceSchema()} />
       <h1 className="text-4xl font-bold tracking-tight text-slate-900">Services that move your business forward</h1>
       <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-        Procore-first technical implementation services for construction teams that need cleaner execution from field to office.
+        Procore-first implementation plus database and analytics engineering services for teams that need cleaner execution and stronger decision systems.
       </p>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         {services.map((service) => (
@@ -98,9 +124,9 @@ export default function ServicesPage() {
       </div>
 
       <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-8">
-        <h2 className="text-2xl font-semibold text-slate-900">Packaged offers for Procore operations teams</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Packaged offers for Procore, data, and analytics teams</h2>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-700">
-          We lead with packaged outcomes instead of vague hourly consulting. Engagements are scoped around measurable improvements in handoff speed, project visibility, and adoption.
+          We lead with packaged outcomes instead of vague hourly consulting. Engagements are scoped around measurable improvements in handoff speed, data reliability, reporting visibility, and adoption.
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {packagedOffers.map((offer) => (
@@ -153,6 +179,18 @@ export default function ServicesPage() {
             className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
           >
             Procore Integration Services
+          </Link>
+          <Link
+            href="/services/database-engineering"
+            className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+          >
+            Database Engineering
+          </Link>
+          <Link
+            href="/services/analytics-engineering"
+            className="inline-flex rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400"
+          >
+            Analytics Engineering
           </Link>
         </div>
       </section>
