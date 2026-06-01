@@ -59,6 +59,35 @@ Notes:
 - The API route also runs `CREATE TABLE IF NOT EXISTS` on submit, so first submission can self-initialize the table.
 - If database connection fails, users are redirected to `/contact?status=db-error`.
 
+## Contact Email Notifications
+
+The contact API can send email notifications after each successful inquiry save.
+
+Supported behavior:
+
+- Internal alert email to your inbox
+- Optional auto-confirmation email to the person who submitted the form
+
+Required SMTP environment variables:
+
+```bash
+SMTP_HOST=smtp.yourprovider.com
+SMTP_PORT=587
+SMTP_USER=your_smtp_username
+SMTP_PASS=your_smtp_password
+SMTP_FROM=notifications@yourdomain.com
+CONTACT_ALERT_EMAIL=you@yourdomain.com
+```
+
+Optional:
+
+```bash
+CONTACT_CONFIRMATION_ENABLED=false
+CONTACT_CONFIRMATION_FROM=notifications@yourdomain.com
+```
+
+If SMTP variables are not present, inquiry saves still succeed and only database storage is used.
+
 ## Built-In Analytics (Database-Backed)
 
 This project now includes built-in analytics event capture to PostgreSQL:
